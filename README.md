@@ -1,3 +1,3 @@
 # React-Router-v6+ Sandbox
-Featuers
+Features
 - Loaders
