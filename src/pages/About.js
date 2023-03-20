@@ -1,7 +1,7 @@
 function About(props) {
   return (
-    <div className="my-10">
-      <h1 className="text-2xl font-semibold my-8">About</h1>
+    <div className="max-w-3xl mx-auto">
+      <h1 className="text-2xl text-center font-semibold my-8">About</h1>
       <p className="text-lg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sed ipsa
         porro sit qui hic repudiandae nulla eveniet at! Molestiae laborum ab

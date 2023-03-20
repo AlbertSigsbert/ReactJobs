@@ -1,7 +1,7 @@
 function Home(props) {
   return (
-    <div className="my-10">
-      <h1 className="text-2xl font-semibold my-8">Welcome</h1>
+    <div className="max-w-3xl mx-auto">
+      <h1 className="text-2xl text-center font-semibold my-8">Welcome</h1>
       <p className="text-lg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
         distinctio saepe, labore ut aperiam sunt! Voluptates nobis, tempora
