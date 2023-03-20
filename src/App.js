@@ -1,29 +1,29 @@
-import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Route 
+} from "react-router-dom";
 
-//components
-
+//layouts
+import RootLayout from "./layouts/RootLayout";
 
 //pages
 import About from "./pages/About";
 import Home from "./pages/Home";
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout/>}>
+      <Route index element={<Home />} />
+      <Route path="about" element={<About />} />
+    </Route>
+  )
+);
+
 function App() {
   return (
-    <BrowserRouter>
-      <header className="mx-[6%] py-4">
-        <nav className="flex gap-4 justify-end">
-          <Link className="mr-auto text-2xl font-bold" to="/">ReactJobs</Link>
-          <NavLink className={({isActive}) => isActive ? 'underline': ''} to="/">Home</NavLink>
-          <NavLink className={({isActive}) => isActive ? 'underline': ''} to="about">About</NavLink>
-        </nav>
-      </header>
-      <main className="mx-[6%]">
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-        </Routes>
-      </main>
-    </BrowserRouter>
+    <RouterProvider router={router}/>
   );
 }
 
