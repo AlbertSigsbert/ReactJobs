@@ -17,7 +17,11 @@ function Careers(props) {
 export default Careers;
 
 export const careersLoader = async () => {
-    const res = await fetch('http://localhost:4000/careers');
+    const res = await fetch('http://localhost:4000/careerss');
+
+    if(!res.ok){
+        throw new Error('Careers could not be fetched')
+    }
 
     return res.json()
 }
