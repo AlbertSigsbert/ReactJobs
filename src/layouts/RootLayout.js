@@ -1,5 +1,6 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 
+
 function RootLayout(props) {
   return (
     <>
@@ -41,6 +42,7 @@ function RootLayout(props) {
             Careers
           </NavLink>
         </nav>
+        {/* <Breadcrumbs/> */}
       </header>
       <main className="mx-[6%] my-10">
         <Outlet />
