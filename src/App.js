@@ -14,7 +14,7 @@ import CareersLayout from "./layouts/CareersLayout";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Faq from "./pages/help/Faq";
-import Contact, { formAction } from "./pages/help/Contact";
+import Contact, { contactAction } from "./pages/help/Contact";
 import NotFound from "./pages/NotFound";
 import Careers, { careersLoader } from "./pages/careers/Careers";
 import CareerDetails, { careerLoader } from "./pages/careers/CareerDetails";
@@ -27,7 +27,7 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="help" element={<HelpLayout />}>
         <Route path="faq" element={<Faq />} />
-        <Route path="contact" element={<Contact />} action={formAction} />
+        <Route path="contact" element={<Contact />} action={contactAction} />
       </Route>
 
       <Route path="careers" element={<CareersLayout />} errorElement={<CareersError/>}>

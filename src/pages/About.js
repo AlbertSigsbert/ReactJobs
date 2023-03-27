@@ -1,4 +1,11 @@
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
+
 function About(props) {
+  const [user, setUser] = useState("john");
+  if (!user) {
+    return <Navigate to="/" replace={true} />;
+  }
   return (
     <div className="max-w-3xl mx-auto">
       <h1 className="text-2xl text-center font-semibold my-8">About</h1>
@@ -21,6 +28,12 @@ function About(props) {
         consequuntur ullam, reiciendis iure molestiae saepe voluptas delectus
         repellat natus? Consequatur voluptas placeat dolore.
       </p>
+      <button
+        onClick={() => setUser(null)}
+        className="my-4 py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-500 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+      >
+        Logout
+      </button>
     </div>
   );
 }
