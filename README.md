@@ -3,3 +3,6 @@
 - createBrowserRouter instead of BrowserRouter
 - RouterProvider
 - Change in implementing nested routes & layouts
+- Loaders
+- Error Elements
+- Form & Actions
